@@ -4,8 +4,6 @@ from tabulate import tabulate
 print("Beginning")
 
 # Change the credentials and the name of the database
-# create table student(id integer, name varchar(10), primary key(id))
-
 con = psycopg2.connect(
     host="localhost",
     database="cs623finalproject",
@@ -23,7 +21,6 @@ con.autocommit = False
 try:
     cur = con.cursor()
     # QUERY
-    #cur.execute("insert into student values (10, 'stud1')")
     cur.execute("CREATE TABLE Product(prodid CHAR(2), pname VARCHAR(30), price DECIMAL)")
     cur.execute("ALTER TABLE Product ADD CONSTRAINT pk_product PRIMARY KEY (prodid)")
     cur.execute("CREATE TABLE Depot(depid VARCHAR(3), addr VARCHAR(30), volume INTEGER)")
