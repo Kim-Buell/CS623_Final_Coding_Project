@@ -8,7 +8,7 @@ con = psycopg2.connect(
     host="localhost",
     database="cs623finalproject",
     user="postgres",
-    password="Slice#159632!")
+    password=##ENTER PASSWORD)
 
 print(con)
 
